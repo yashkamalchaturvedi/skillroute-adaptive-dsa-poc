@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="SkillRoute — adaptive, prerequisite-aware DSA practice.">
+  <title>SkillRoute — Adaptive DSA Practice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <a class="brand" href="#"><span class="brand-mark">S</span><span>SkillRoute</span></a>
+    <nav><a class="nav-item active" href="#"><span>⌂</span> Learn</a><a class="nav-item" href="#map"><span>◇</span> Skill map</a><a class="nav-item" href="#progress"><span>↗</span> Progress</a></nav>
+    <div class="streak-card"><span class="eyebrow">CURRENT STREAK</span><strong>🔥 7 days</strong><small>Keep your momentum going</small></div>
+    <div class="profile"><div class="avatar">YK</div><div><b>Yash</b><small>Explorer · Lv. 6</small></div><button aria-label="Profile menu">•••</button></div>
+  </aside>
+  <main>
+    <header>
+      <div><p class="eyebrow">YOUR ADAPTIVE PATH</p><h1>Good afternoon, Yash.</h1><p>One focused session. We’ll handle the routing.</p></div>
+      <div class="xp"><span>⚡</span><div><b>1,240 XP</b><small>160 to Level 7</small></div></div>
+    </header>
+    <section class="hero-grid">
+      <article class="next-card">
+        <div class="next-top"><span class="pill">RECOMMENDED NEXT</span><span class="difficulty">● Medium</span></div>
+        <div class="topic-icon">↯</div>
+        <div class="next-copy"><p class="eyebrow">BINARY SEARCH · QUESTION 4 OF 7</p><h2>Find First and Last Position</h2><p>Use binary search twice to locate the boundaries of a target value in a sorted array.</p>
+          <div class="reason"><span>✦</span><p><b>Why this question?</b><br>Your boundary handling needs reinforcement before rotated arrays.</p></div>
+        </div>
+        <button class="primary" id="startBtn">Continue practice <span>→</span></button>
+      </article>
+      <aside class="mastery-card" id="progress">
+        <div class="card-heading"><div><p class="eyebrow">TOPIC MASTERY</p><h3>Binary Search</h3></div><span class="score">68%</span></div>
+        <div class="mastery-bar"><i style="width:68%"></i></div>
+        <div class="metrics"><div><b>5</b><small>Solved</small></div><div><b>73%</b><small>Accuracy</small></div><div><b>18m</b><small>Avg. time</small></div></div><hr>
+        <p class="mini-title">CONCEPT SIGNALS</p>
+        <div class="signal"><span>Search space</span><b>Strong</b><i><em style="width:88%"></em></i></div>
+        <div class="signal"><span>Boundary logic</span><b class="warn">Learning</b><i><em style="width:58%"></em></i></div>
+        <div class="signal"><span>Complexity</span><b>Strong</b><i><em style="width:82%"></em></i></div>
+      </aside>
+    </section>
+    <section class="path-section" id="map">
+      <div class="section-title"><div><p class="eyebrow">LEARNING PATH</p><h2>Your prerequisite map</h2></div><span>7 of 18 topics mastered</span></div>
+      <div class="path-grid">
+        <article class="path-card done"><span class="status">✓</span><div><small>FOUNDATION</small><h3>Arrays & Strings</h3><p>8 / 8 concepts mastered</p></div><strong>100%</strong></article>
+        <article class="path-card active"><span class="status">↯</span><div><small>SEARCHING</small><h3>Binary Search</h3><p>2 concepts need attention</p></div><strong>68%</strong></article>
+        <article class="path-card locked"><span class="status">⌁</span><div><small>NEXT UP</small><h3>Two Pointers</h3><p>Unlocks at 75% Binary Search</p></div><strong>🔒</strong></article>
+      </div>
+    </section>
+  </main>
+</div>
+<div class="modal" id="practiceModal" aria-hidden="true">
+  <div class="practice-panel">
+    <div class="practice-head"><div><p class="eyebrow">BINARY SEARCH · MEDIUM</p><h2>Find First and Last Position</h2></div><button id="closeBtn" aria-label="Close">×</button></div>
+    <div class="practice-body">
+      <div class="problem"><p>Given a sorted integer array <code>nums</code>, return the first and last position of <code>target</code>. Return <code>[-1, -1]</code> if it is absent.</p><h4>Example</h4><pre>Input: nums = [5,7,7,8,8,10], target = 8
+Output: [3,4]</pre><div id="coach" class="coach"><span>✦</span><p><b>AI Coach</b><br>Start by finding the left boundary. What should happen when <code>nums[mid] == target</code>?</p></div></div>
+      <div class="editor-wrap"><div class="editor-bar"><span>Java 17</span><button id="hintBtn">Get hint</button></div><textarea id="editor" spellcheck="false">class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        // Find the left and right boundaries
+        return new int[]{-1, -1};
+    }
+}</textarea><div class="run-bar"><span id="runStatus">Ready to run</span><button id="runBtn">▶ Run code</button><button class="submit" id="submitBtn">Submit</button></div></div>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body></html>

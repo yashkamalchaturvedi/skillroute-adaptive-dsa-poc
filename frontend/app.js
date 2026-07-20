@@ -1,0 +1,7 @@
+const modal=document.querySelector('#practiceModal'),editor=document.querySelector('#editor'),status=document.querySelector('#runStatus'),coach=document.querySelector('#coach p');
+document.querySelector('#startBtn').onclick=()=>{modal.classList.add('open');modal.setAttribute('aria-hidden','false')};
+document.querySelector('#closeBtn').onclick=()=>{modal.classList.remove('open');modal.setAttribute('aria-hidden','true')};
+document.querySelector('#hintBtn').onclick=()=>{coach.innerHTML='<b>Hint 1 of 3</b><br>When you find the target, save the index—then keep searching left by moving <code>right = mid - 1</code>.'};
+document.querySelector('#runBtn').onclick=async()=>{status.textContent='Running 6 test cases…';await new Promise(r=>setTimeout(r,850));const attempted=editor.value.includes('while')||editor.value.includes('Arrays.binarySearch');status.textContent=attempted?'✓ 4/6 tests passed · check duplicates':'✕ 2/6 tests passed · placeholder returned';status.style.color=attempted?'#d5f56b':'#f09b70'};
+document.querySelector('#submitBtn').onclick=async()=>{status.textContent='AI is reviewing your reasoning…';await new Promise(r=>setTimeout(r,900));coach.innerHTML='<b>Understanding check</b><br>Good start. Before mastery changes: why does this remain <code>O(log n)</code> even though binary search runs twice?';status.textContent='Review ready in AI Coach'};
+modal.onclick=e=>{if(e.target===modal)document.querySelector('#closeBtn').click()};
